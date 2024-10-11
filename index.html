@@ -29,7 +29,8 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
+                        'gradient-start': '#FF8938',
+                        'gradient-end': '#FF0000',
                     }
                 }
             }
@@ -40,8 +41,62 @@
 
 <body class="font-manrope">
     <header class="container mx-auto mt-20">
-        <div class="hero ">
-            <div class="hero-content flex-col lg:flex-row">
+        <!-- navbar -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Home</a></li>
+                  <li>
+                    <a>Pages</a>
+                    <ul class="p-2">
+                      <li><a>Home 1</a></li>
+                      <li><a>Home 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a>About</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-xl">Tea House</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li>
+                  <details>
+                    <summary>Pages</summary>
+                    <ul class="p-2">
+                      <li><a>Home 1</a></li>
+                      <li><a>Home 2</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a>About</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn">Login</a>
+            </div>
+          </div>
+          <!-- hero -->
+        <div class="my-20">
+            <div class="flex justify-between items-center flex-col lg:flex-row">
                 <div>
                     <h1 class="text-7xl font-extrabold">It's good <br>
                         tea time at The <br> Tea House</h1>
@@ -49,11 +104,11 @@
                         Tea and Botanical Solutions Supplier Give Optimum <br> Satisfaction To Your Taste Buds.
                     </p>
                     <button
-                        class="btn btn-primary bg-gradient-to-r from-[#FF8938] to-[#F00] text-white text-2xl font-bold border-none text-center">Explore
-                        More</button>
+                        class="btn bg-gradient-to-r from-gradient-start to-gradient-end text-white ">Explore
+                        More <i class="fa-solid fa-arrow-trend-up"></i></button>
                 </div>
                 <div>
-                    <img src="images/banner.png" class="max-w-sm rounded-lg" alt="">
+                    <img src="images/banner.png" class="rounded-lg" alt="">
                     <div class="-mt-16 flex items-center gap-4 drop-shadow-lg bg-white p-5 w-60">
                         <i class="fa-solid fa-star text-3xl text-[#FFC850]"></i>
                         <div>
@@ -142,7 +197,7 @@
         </section>
         <!-- super client section -->
         <section
-            class="my-24 flex flex-col lg:flex-row gap-14 rounded-xl bg-gradient-to-r from-[#FF8938] to-[#FF0000] px-16 py-24">
+            class="my-24 flex flex-col lg:flex-row gap-14 rounded-xl bg-gradient-to-r from-gradient-start to-gradient-end px-16 py-24">
             <div class="flex items-center text-white s">
                 <div class="space-y-5 ">
                     <h2 class="text-5xl font-extrabold">Meet Our Super <br> Clients</h2>
@@ -152,7 +207,7 @@
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even
                         slightly believable. </p>
-                    <button class="btn btn-primary">Show All</button>
+                    <button class="btn text-gradient-end text-gradient-to-r from-gradient-start to-gradient-end border-none">Show All</button>
                 </div>
             </div>
             <!-- review container -->
@@ -244,8 +299,51 @@
             </div>
         </section>
     </main>
-    <footer>
-
+    <footer class=" bg-base-200 text-base-content px-4 lg:px-48 py-10" >
+        <div class="flex justify-between my-24">
+            <img src="images/cup.png" alt="">
+            <p>
+                <span>Ready to get started?</span>
+                <button class="btn bg-gradient-to-r from-gradient-start to-gradient-end text-white">Get Started</button>
+            </p>
+        </div>
+       <div class="footer">
+        <nav>
+            <h6 class="footer-title">Services</h6>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <form>
+            <h6 class="footer-title">Newsletter</h6>
+            <fieldset class="form-control w-72">
+                <label class="label">
+                    <span class="label-text">Enter your email address</span>
+                </label>
+                <div class="relative">
+                    <input type="text" placeholder="username@site.com" class="py-4 border-b-2 border-black outline-none bg-transparent" />
+                    <button class="btn mx-4 absolute top-0 right-0 rounded-full bg-gradient-to-r from-gradient-start to-gradient-end text-white"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </fieldset>
+        </form>
+       </div>
+        <aside class="mt-10 text-center">
+            <p>Copyright © 2024 - All right reserved</p>
+          </aside>
     </footer>
 
 </body>
